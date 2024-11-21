@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>E-Commerce App</h1>
+    <nav>
+      <button onclick="showPage('products')">Daftar Produk</button>
+      <button onclick="showPage('cart')">Keranjang</button>
+      <button onclick="showPage('checkout')">Checkout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products" class="page">
+      <h2>Daftar Produk</h2>
+      <div id="product-list" class="card-container"></div>
+    </section>
+
+    <section id="cart" class="page hidden">
+      <h2>Keranjang Belanja</h2>
+      <div id="cart-list" class="card-container"></div>
+      <div class="cart-summary">
+        <p>Total: <span id="cart-total">0</span></p>
+        <button class="btn-primary" onclick="showPage('checkout')">Lanjut ke Checkout</button>
+      </div>
+    </section>
+
+    <section id="checkout" class="page hidden">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <label>
+          Nama:
+          <input type="text" id="name" required>
+        </label>
+        <label>
+          Alamat:
+          <input type="text" id="address" required>
+        </label>
+        <button type="submit" class="btn-primary">Bayar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
